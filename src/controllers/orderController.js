@@ -35,7 +35,7 @@ createOrder = asyncHandler(async(req,res)=>{
 
 })
 
-getorders = asyncHandler(async(req,res)=>{
+getOrders = asyncHandler(async(req,res)=>{
     userId = req.user._id;
     const userOrders = await orders.find();
     res.json(userOrders)
@@ -46,7 +46,7 @@ getOrder = asyncHandler(async(req,res)=>{
     res.json(userOrder)
 })
 
-getUserOrder = asyncHandler(async(req,res)=>{
+getUserOrders = asyncHandler(async(req,res)=>{
     const userId = req.user._id;
 
     const userOrders = await Orders.find({orderby : userId})
